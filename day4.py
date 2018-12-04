@@ -25,11 +25,13 @@ for time in sorted(times):
             times_slept_by_guard_and_minute[(current_guard_id, t)] += 1
 
 best_guard = max(guards_by_time_slept, key=guards_by_time_slept.get)
+best_min_times = 0
 best_min = 0
 
 for i in range(60):
-    if best_min == 0 or best_min < times_slept_by_guard_and_minute[(best_guard, i)]:
+    if best_min_times == 0 or best_min_times < times_slept_by_guard_and_minute[(best_guard, i)]:
         best_min = i
+        best_min_times = times_slept_by_guard_and_minute[(best_guard, i)]
 
 print(best_guard * best_min)
 
