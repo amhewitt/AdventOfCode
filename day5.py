@@ -21,8 +21,8 @@ while True:
 
 # Part 2
 
-shortest = 0
-alphas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+shortest = len(rxn)
+alphas = "qwertyuiopasdfhjklzxcvbnm"
 
 for a in alphas:
     mrxn = rxn
@@ -45,8 +45,6 @@ for a in alphas:
                     mrxn = mrxn[0:j] + mrxn[j + 2:len(mrxn)] # remove both indices i and i + 1
                     break
         if not reacted:
-            if shortest == 0 or shortest > len(mrxn):
-                shortest = len(mrxn)
-                print(a, shortest)
+            shortest = min(len(mrxn, shortest))
             break
 print(shortest)
