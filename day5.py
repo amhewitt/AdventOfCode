@@ -45,6 +45,6 @@ for a in alphas:
                     mrxn = mrxn[0:j] + mrxn[j + 2:len(mrxn)] # remove both indices i and i + 1
                     break
         if not reacted:
-            shortest = min(len(mrxn, shortest))
+            shortest = min(len(mrxn), shortest)
             break
 print(shortest)
