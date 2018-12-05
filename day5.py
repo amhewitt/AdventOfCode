@@ -1,6 +1,6 @@
 import re
 
-rxn = [str(x) for x in open("./input/day5-input.txt").readlines()][0]
+rxn = [str(x) for x in open("./input/day5-input.txt").readlines()][0].strip('\n')
 
 # Part 1
 
